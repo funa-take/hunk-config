@@ -1,0 +1,24 @@
+# 行の中で変わった文字(addedContentBg / removedContentBg)は、既定では行の背景とほぼ同じで目立たないため、
+# 緑・赤にする。selectedHunk は範囲選択などの背景色
+theme = "custom"
+
+# ] / [ は拡張 changenav(変更が連続している範囲の先頭行へ移動)に割り当てるため、標準の次/前の変更を外す
+# (V は拡張 copypath に割り当てており、標準の範囲選択 v はそのまま使える)
+# Home / End は拡張 edgenav(行頭・行末へのスクロール)に割り当てるため、標準のレビュー全体の先頭/末尾は g / G だけにする
+# / n N は拡張 linesearch(マッチを 1 件ずつ移動する検索)に割り当てるため、標準の検索を外す
+[keybindings]
+"hunk.search.find" = false
+"hunk.search.next" = false
+"hunk.search.previous" = false
+# "hunk.review.startVisualSelection" = false
+"hunk.review.nextHunk" = false
+"hunk.review.previousHunk" = false
+"hunk.review.jumpToTop" = "g"
+"hunk.review.jumpToBottom" = "G"
+
+[custom_theme]
+base = "github-dark-default"
+label = "github-dark-custom"
+addedContentBg = "#1f7a3d"
+removedContentBg = "#9b2c2c"
+selectedHunk = "#b8891a"
